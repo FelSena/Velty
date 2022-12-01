@@ -18,7 +18,7 @@ export default function Default(props) {
   const textColorSecondary = "secondaryGray.600";
 
   return (
-    <Card w="387px" h="196px">
+    <Card w={{ base: "280px", md: "387px" }} h="196px">
       <Flex direction="column" h="100%" align="start" justify="space-between">
         {startContent}
         <Stat my="auto" ms={startContent ? "18px" : "0px"}>

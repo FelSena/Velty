@@ -21,11 +21,16 @@ export default function Default(props) {
 
   const textColor = useColorModeValue("gray.100", "white");
   const textColorSecondary = "gray.100";
-  const brandColor = useColorModeValue(`${bg}`, "white");
-  const boxBg = useColorModeValue("gray.100", "whiteAlpha.100");
+  const brandColor = useColorModeValue(`${bg}`, `${bg}`);
+  const boxBg = useColorModeValue("gray.100", "gray.100");
 
   return (
-    <Card bg={brandColor} w="380px" h="310px" alignItems="center">
+    <Card
+      bg={brandColor}
+      w={{ base: "280px", md: "380px" }}
+      h="310px"
+      alignItems="center"
+    >
       <SimpleGrid
         my="auto"
         h="75%"
@@ -44,7 +49,8 @@ export default function Default(props) {
           <StatNumber
             color={textColor}
             fontSize={{
-              base: "5xl",
+              base: "4xl",
+              md: "5x1",
             }}
           >
             <Flex gap="4px">{value}</Flex>
@@ -60,7 +66,7 @@ export default function Default(props) {
           </StatLabel>
         </Stat>
       </SimpleGrid>
-      <HSeparator bg={boxBg} w="380px" />
+      <HSeparator bg={boxBg} w={{ base: "280px", md: "380px" }} />
       <SimpleGrid my="auto" h="25%" w="100%">
         <Stat my="auto">
           <StatNumber

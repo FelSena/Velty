@@ -6,8 +6,9 @@ import {
   InputLeftElement,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
-export function SearchBar(props) {
+import { MdDashboard } from "react-icons/md";
+
+export function DateBar(props) {
   // Pass the computed styles into the `__css` prop
   const { variant, background, children, placeholder, borderRadius, ...rest } =
     props;
@@ -31,19 +32,20 @@ export function SearchBar(props) {
             _focus={{
               boxShadow: "none",
             }}
-            icon={<SearchIcon color={searchIconColor} w="15px" h="15px" />}
+            icon={<MdDashboard color={searchIconColor} w="15px" h="15px" />}
           ></IconButton>
         }
       />
       <Input
-        variant="search"
+        type="date"
         fontSize="sm"
         bg={background ? background : inputBg}
         color={inputText}
         fontWeight="500"
         _placeholder={{ color: "gray.400", fontSize: "14px" }}
         borderRadius={borderRadius ? borderRadius : "30px"}
-        placeholder={placeholder ? placeholder : "Busca"}
+        placeholder={placeholder ? placeholder : "Data"}
+        borderColor="transparent"
       />
     </InputGroup>
   );

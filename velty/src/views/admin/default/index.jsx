@@ -18,6 +18,7 @@ import tableDataCategory from "views/admin/default/variables/tableDataCategory.j
 import tableDataPlans from "views/admin/default/variables/tableDataPlans.json";
 import MoneyStatistics from "components/card/MoneyStatistics";
 import ColumnsTable from "./components/ComplexTable";
+import FilterBar from "components/filterBar/FilterBar";
 
 export default function UserReports() {
   // Chakra Color Mode
@@ -25,6 +26,7 @@ export default function UserReports() {
   const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
+      <FilterBar />
       <Flex
         align="center"
         gap="20px"
@@ -79,11 +81,7 @@ export default function UserReports() {
         />
       </SimpleGrid>
 
-      <SimpleGrid
-        columns={{ base: 1, md: 4, lg: 4, xl: 4 }}
-        gap="20px"
-        mb="20px"
-      >
+      <Flex direction={{ base: "column", md: "row" }} gap="20px" mb="20px">
         <MoneyStatistics
           startContent={
             <IconBox
@@ -152,7 +150,7 @@ export default function UserReports() {
           value="3.122"
           small="3%"
         />
-      </SimpleGrid>
+      </Flex>
 
       <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap="20px" mb="20px">
         <ColumnsTable

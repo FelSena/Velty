@@ -9,10 +9,8 @@ import { HSeparator } from "components/separator/Separator";
 import logo from "../../../assets/img/logo.png";
 
 export function SidebarBrand() {
-  //   Chakra color mode
-
   return (
-    <Flex align="center" direction="column">
+    <Flex align="center" direction="column" gap="20px">
       <img src={logo} />
       <HSeparator mb="20px" />
     </Flex>
