@@ -1,0 +1,22 @@
+[
+  {
+    "club": "6 vendas",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  },
+  {
+    "club": "12 vendas",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  },
+  {
+    "club": "24 vendas",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  },
+  {
+    "club": "Personalizado",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  }
+]

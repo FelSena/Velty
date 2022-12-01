@@ -1,38 +1,21 @@
 import React from "react";
 // Chakra imports
 import {
-  Avatar,
   Box,
   Flex,
-  FormLabel,
-  Grid,
   Icon,
-  Select,
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import Usa from "assets/img/dashboards/usa.png";
 // Custom components
 import MiniStatistics from "components/card/MiniStatistics";
 import MoneyCard from "components/card/MoneyCard";
 import IconBox from "components/icons/IconBox";
 import { MdAttachMoney } from "react-icons/md";
-import CheckTable from "views/admin/default/components/CheckTable";
-import ComplexTable from "views/admin/default/components/ComplexTable";
-import DailyTraffic from "views/admin/default/components/DailyTraffic";
-import PieCard from "views/admin/default/components/PieCard";
-import Tasks from "views/admin/default/components/Tasks";
-import TotalSpent from "views/admin/default/components/TotalSpent";
-import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
-import {
-  columnsDataCheck,
-  columnsDataComplex,
-  columnsDataDefault,
-} from "views/admin/default/variables/columnsData";
-import tableDataCheck from "views/admin/default/variables/tableDataCheck.json";
-import tableDataComplex from "views/admin/default/variables/tableDataComplex.json";
+import { columnsDataDefault } from "views/admin/default/variables/columnsData";
 import tableDataDefault from "views/admin/default/variables/tableDataDefault.json";
+import tableDataCategory from "views/admin/default/variables/tableDataCategory.json";
+import tableDataPlans from "views/admin/default/variables/tableDataPlans.json";
 import MoneyStatistics from "components/card/MoneyStatistics";
 import ColumnsTable from "./components/ComplexTable";
 
@@ -97,7 +80,7 @@ export default function UserReports() {
       </SimpleGrid>
 
       <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, "2xl": 6 }}
+        columns={{ base: 1, md: 4, lg: 4, xl: 4 }}
         gap="20px"
         mb="20px"
       >
@@ -177,6 +160,18 @@ export default function UserReports() {
           tableData={tableDataDefault}
           tableName="Planos"
           subtitle="123 planos ativos"
+        />
+        <ColumnsTable
+          columnsData={columnsDataDefault}
+          tableData={tableDataCategory}
+          tableName="Categorias"
+          subtitle="4 categorias em uso"
+        />
+        <ColumnsTable
+          columnsData={columnsDataDefault}
+          tableData={tableDataPlans}
+          tableName="Tipos de Plano"
+          subtitle="2 tipos em uso"
         />
       </SimpleGrid>
     </Box>

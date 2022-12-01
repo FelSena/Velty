@@ -11,9 +11,7 @@ import {
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
-import NFTMarketplace from "views/admin/marketplace";
-import Profile from "views/admin/profile";
-import DataTables from "views/admin/dataTables";
+import NoAccess from "views/admin/noAccess";
 
 const routes = [
   {
@@ -35,7 +33,7 @@ const routes = [
         color="inherit"
       />
     ),
-    component: NFTMarketplace,
+    component: NoAccess,
     secondary: true,
   },
   {
@@ -43,21 +41,21 @@ const routes = [
     layout: "/admin",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
     path: "/relatorios",
-    component: DataTables,
+    component: NoAccess,
   },
   {
     name: "Lojas Parceiras",
     layout: "/admin",
     path: "/lojas",
     icon: <Icon as={MdDashboard} width="20px" height="20px" color="inherit" />,
-    component: MainDashboard,
+    component: NoAccess,
   },
   {
     name: "Clientes",
     layout: "/admin",
     path: "/clientes",
     icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
-    component: Profile,
+    component: NoAccess,
   },
 ];
 
