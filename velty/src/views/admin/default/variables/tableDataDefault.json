@@ -1,0 +1,22 @@
+[
+  {
+    "club": "Estagiários",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  },
+  {
+    "club": "Diretoria",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  },
+  {
+    "club": "Geral",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  },
+  {
+    "club": "Almoxerifado",
+    "client": "312 Clientes",
+    "price": "R$123,90"
+  }
+]
